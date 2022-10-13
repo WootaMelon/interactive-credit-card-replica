@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --input-error: hsl(0, 100%, 66%);
+  --active-border: hsl(278, 94%, 30%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+.error-text {
+  color: var(--input-error);
+}
+
+input {
+  padding: 0.9rem 0;
+  margin: 0.5rem 0;
+  border: none;
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--active-border);
+}
+
+label {
+  font-size: 12px;
+  color: var(--Very-dark-violet);
+}
+
+button {
+  border: none;
+  background-color: var(--Very-dark-violet);
+  color: var(--Light-grayish-violet);
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 8px;
+  padding: 0.5rem 5rem;
+  cursor: pointer;
+}
+
+.background-image {
+  position: relative;
+}
+
+.background-image img {
+  width: 100%;
+  height: auto;
+}
+.back-card-div {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+.back-card-div img {
+  width: 300px;
+}
+
+.cvc-on-card {
+  position: absolute;
+  top: 41%;
+  right: 12%;
+}
+
+.front-card-div {
+  position: absolute;
+  left: 5%;
+  top: 47%;
+}
+.front-card-div img {
+  width: 300px;
+}
+
+.card-logo-div {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+}
+.card-logo-div img {
+  width: 50px;
+}
+
+.card-number-on-card {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+.card-name-on-card {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+
+.card-date-on-card {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+.card-date-on-card p {
+  display: inline;
+}
+
+.data-on-card {
+  color: #ffffff;
+}
+
+.card-details-container {
+  width: 90%;
+  margin: 30% auto;
+}
+
+.card-name-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-name-number input {
+  padding-left: 1rem;
+}
+
+.card-details-date-cvc {
+  display: flex;
+  flex-direction: row;
+}
+.card-details-date-cvc input {
+  text-align: center;
+}
+.cvc {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+}
+.date-inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.date-inputs-with-errors {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-inputs-with-errors p {
+  text-align: center;
+}
+
+.date-inputs input {
+  width: 90%;
+  margin-left: 0.2rem;
+}
+
+.cvc p {
+  text-align: center;
+}
+
+.button-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.thank-you-div {
+  text-align: center;
+}
+
+.thank-you-div p {
+  padding: 1rem 0;
+  color: var(--Light-grayish-violet);
+}
+.thank-you-div .thank-you-text {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--Very-dark-violet)
+  
+}
+
+@media (min-width: 1440px) {
+  body {
+    overflow-y: hidden;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .background-image {
+    width: 50%;
+  }
+  .background-image .main-img {
+    height: 100vh;
+  }
+  .back-card-div {
+    position: absolute;
+    top: 50%;
+    right: -20%;
+  }
+  .front-card-div {
+    position: absolute;
+    top: 25%;
+    left: initial;
+    right: -10%;
+  }
+  .card-details {
+    width: 50%;
+    margin: auto 10%;
+  }
+}
